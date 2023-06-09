@@ -19,8 +19,9 @@
     force: yes
 
 - name: copy html content to one level up
-  become: true
-  command: cp -r /var/www/html /var/www
+  become: yes
+  become_user: true
+  command: rsync -av --exclude='html' /var/www/html/ /var/www/
 
 - name: Start service httpd, if not started
   become: true
