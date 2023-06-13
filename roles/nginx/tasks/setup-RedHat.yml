@@ -9,6 +9,7 @@
   when: nginx_yum_repo_enabled | bool
 
 - name: Ensure nginx is installed.
+  become: yes
   package:
     name: "{{ nginx_package_name }}"
     state: present
