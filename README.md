@@ -3,7 +3,7 @@ Experience Continuous Integration With Jenkins | Ansible | Artifactory | Sonarqu
 In this project, you will understand and get hands on experience around the entire concept around CI/CD from applications perspective. To fully gain real expertise around this idea, it is best to see it in action across different programming languages and from the platform perspective too. From the application perspective, we will be focusing on PHP here; there are more projects ahead that are based on Java, Node.js, .Net and Python. By the time you start working on Terraform, Docker and Kubernetes projects, you will get to see the platform perspective of CI/CD in action.
 To emphasize a typical CI Pipeline further, let us explore the diagram below.
 
-![A_typical_CI_Pipeline ](./A_typical_CI_Pipeline/A_typical_CI_Pipeline.PNG)
+![A typical CI Pipeline](<Images_P14/A_typical_CI_Pipeline .png>)
 
 - __Version Control:__ This is the stage where developers’ code gets committed and pushed after they have tested their work locally.
 - __Build:__ Depending on the type of language or technology used, we may need to build the codes into binary executable files (in case of compiled languages) or just package the codes together with all necessary dependencies into a deployable package (in case of interpreted languages).
@@ -15,7 +15,7 @@ To emphasize a typical CI Pipeline further, let us explore the diagram below.
 
 In this project, I will be setting up a CI/CD Pipeline for a __PHP__ based application. The overall CI/CD process looks like the architecture below.
 
-![image](./images/ab.PNG)
+![SIMULATING A TYPICAL CI/CD PIPELINE FOR A PHP BASED APPLICATION](Images_P14/Project_goal_simulate.png)
 
 This project is architected in two major repositories with each repository containing its own CI/CD pipeline written in a Jenkinsfile
 
@@ -26,3 +26,44 @@ This project is architected in two major repositories with each repository conta
 For this project, i will be using __RHEL 8 and ubuntu 20.04 instances__. The tools we will be using to build, test, run code analysis, package and deploy our PHP application are Github, jenkins, Sonarqube and jfrog artifactory.
 
 __CONFIGURING THE JENKINS SERVER FOR DEPLOYMENT__
+step 1: We will configure our Jekins server.
+![set up Jenkins instance](Images_P14/set-up-jenkins-instance.png)
+
+step 2: connect to host:
+![ ssh to host](Images_P14/connect-to-host.png)
+
+step 3: Edit hostname
+![Edit_hostname](Images_P14/edit_hostname.png)
+
+step 4: install Jenkins
+![install Jenkins](Images_P14/install-jenkins.png)
+
+step 5: install dependencies for java
+![install dependencies for java](Images_P14/install-dependencies-for-Java.png)
+
+step 6: update bash_profile
+![update bash profile](Images_P14/update-bash-profile.png)
+ 
+ step 7: start jenkins
+ ![start jenkins](Images_P14/start-jenkins.png)
+
+ step 8: set up jenins and enable proximity
+ ![enable-proxy](Images_P14/enable-proxy-compatibility.png)
+
+ step 9: Install & Open Blue Ocean Jenkins Plugin
+ ![install blue ocean plugin](Images_P14/install-blue-ocean-plugin.png)
+
+ step 10: create access token
+ ![create access token](Images_P14/1create-access-token.png)
+
+ step 11: select github and generate token
+ ![select git](Images_P14/2create-an-access-token.png)
+
+ step 12: create pipeline
+ ![create pipeline](Images_P14/3create-pipeline.png)
+
+ step 13: see newly created pipeline
+ ![pipeline](Images_P14/newly-created-pipeline.png)
+
+ step 14: create jenkins file
+ 
