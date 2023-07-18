@@ -66,4 +66,20 @@ step 6: update bash_profile
  ![pipeline](Images_P14/newly-created-pipeline.png)
 
  step 14: create jenkins file
+![Alt text](Images_P14/create-jenkins-file.png)
+
+ step 15: Build-configuration 
+![Alt text](Images_P14/build-configuration.png)
+
+ step 16: push changes to git
+![Alt text](Images_P14/push-changes.png)
+ 
+ step 17: view build report on console output
+![Alt text](Images_P14/console-output.png)
+
+ step 18: view UI build on blue ocean
+![Alt text](Images_P14/triggering-build-from-blueocean.png)
+
+ step 19: view build branch main report on blue ocean
+![Alt text](Images_P14/buildonbranchmain.png)
  
