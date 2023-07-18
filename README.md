@@ -3,7 +3,7 @@ Experience Continuous Integration With Jenkins | Ansible | Artifactory | Sonarqu
 In this project, you will understand and get hands on experience around the entire concept around CI/CD from applications perspective. To fully gain real expertise around this idea, it is best to see it in action across different programming languages and from the platform perspective too. From the application perspective, we will be focusing on PHP here; there are more projects ahead that are based on Java, Node.js, .Net and Python. By the time you start working on Terraform, Docker and Kubernetes projects, you will get to see the platform perspective of CI/CD in action.
 To emphasize a typical CI Pipeline further, let us explore the diagram below.
 
-![image](./images/qw.PNG)
+![A_typical_CI_Pipeline ](./A_typical_CI_Pipeline/A_typical_CI_Pipeline.PNG)
 
 - __Version Control:__ This is the stage where developers’ code gets committed and pushed after they have tested their work locally.
 - __Build:__ Depending on the type of language or technology used, we may need to build the codes into binary executable files (in case of compiled languages) or just package the codes together with all necessary dependencies into a deployable package (in case of interpreted languages).
