@@ -83,3 +83,20 @@ step 6: update bash_profile
  step 19: view build branch main report on blue ocean
 ![Alt text](Images_P14/buildonbranchmain.png)
  
+ step 20: scan repo for new branch 
+ ![Alt text](Images_P14/scan-repo-for-newbranchcreated.png)
+
+ step 21: Add a new stage for tests
+![Alt text](Images_P14/add-testing-step1.png)
+
+ step 22 build testing step
+ ![Alt text](Images_P14/new-testing-step.png)
+
+ step 22: Add stage for deployment to cleanup
+ ![Alt text](Images_P14/add-stage-for-deploytocleanup.png)
+
+ step23: view build console on jenkins UI
+![Alt text](Images_P14/packagetodeploytocleanup1.png)
+
+step 24 view result on blueocean UI
+![Alt text](Images_P14/packagetodeploytocleanup2.png)
