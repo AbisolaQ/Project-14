@@ -30,8 +30,8 @@ pipeline {
     stage('Setting Roles Path in the Ansible.cfg File') {
 
       steps {
-        sh 'echo ${WORKSPACE}'
-        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
+        sh 'echo /var/lib/jenkins/workspace/Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
+        sh 'sed -i "3 a roles_path=/var/lib/jenkins/workspace/main/roles" /var/lib/jenkins/workspace/Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
       }
     }
 
@@ -54,3 +54,4 @@ pipeline {
 }
 
 
+//  sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
