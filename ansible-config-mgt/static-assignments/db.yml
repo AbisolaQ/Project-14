@@ -1,5 +1,5 @@
 ---
 - hosts: db
   roles:
-     - mysql
+     - ansible-config-mgt/static-assignments/mysql
   become: true
