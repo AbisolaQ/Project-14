@@ -1,4 +1,4 @@
 ---
 - hosts: nginx
   roles:
-   - nginx
+   - ansible-config-mgt/static-assignments/nginx.yml
