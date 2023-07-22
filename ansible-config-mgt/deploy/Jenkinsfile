@@ -3,7 +3,7 @@ pipeline {
    agent any
 
    environment {
-    ANSIBLE_CONFIG='${WORKSPACE}ansible-config-mgt/deploy/ansible.cfg'
+    ANSIBLE_CONFIG='${WORKSPACE}Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
    }
 
   parameters {
@@ -23,7 +23,7 @@ pipeline {
 
     stage('Checkout SCM') {
       steps {
-        git branch: 'main', url: 'https://github.com/AbisolaQ/Project-14.git'
+        git branch: 'main', url: 'https://github.com/AbisolaQ/Project-14/tree/main/ansible-config-mgt'
       }
     }
 
@@ -31,7 +31,7 @@ pipeline {
 
       steps {
         sh 'echo ${WORKSPACE}'
-        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}ansible-config-mgt/deploy/ansible.cfg'
+        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
       }
     }
 
@@ -52,3 +52,5 @@ pipeline {
      
    }
 }
+
+
