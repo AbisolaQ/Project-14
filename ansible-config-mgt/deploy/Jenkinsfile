@@ -3,7 +3,7 @@ pipeline {
    agent any
 
    environment {
-    ANSIBLE_CONFIG='${WORKSPACE}/deploy/ansible.cfg'
+    ANSIBLE_CONFIG='${WORKSPACE}ansible-config-mgt/deploy/ansible.cfg'
    }
 
   parameters {
@@ -31,7 +31,7 @@ pipeline {
 
       steps {
         sh 'echo ${WORKSPACE}'
-        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'
+        sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}ansible-config-mgt/deploy/ansible.cfg'
       }
     }
 
