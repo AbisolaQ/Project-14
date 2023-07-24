@@ -100,3 +100,62 @@ step 6: update bash_profile
 
 step 24 view result on blueocean UI
 ![Alt text](Images_P14/packagetodeploytocleanup2.png)
+
+step 25: 
+Click on the ansible-config-mgt job and then click on "Administration" button to go back to the jenkins UI.
+
+RUNNING ANSIBLE PLAYBOOK FROM JENKINS
+
+Now that we have a broad overview of a typical Jenkins pipeline. Let us get the actual Ansible deployment to work.
+
+We will be setting up database and nginx on two different instances using ansible playbook on jenkins UI.
+
+Step 25: We will be setting up database and nginx on two different instances using ansible playbook on jenkins UI.
+![Alt text](Images_P14/start-nginx-db-todo-instance.png)
+
+Step 26: Install ansible and it's dependencies.
+![Alt text](Images_P14/install-ansible.png)
+![Alt text](Images_P14/install-ansible-dependencies.png)
+
+Step 27: Installing Ansible plugin in Jenkins UI
+![Alt text](Images_P14/install-ansible-plugin-on-jenkins.png)
+
+Step  28: Then go to "global tool configuration" under "manage jenkins" to set up ansible plugin to work with jenkins
+![Alt text](Images_P14/ansible-installation.png)
+
+step 29:Creating Jenkinsfile to run the ansible playbook on jenkins.
+
+Jenkins needs to export the ANSIBLE_CONFIG environment variable. You can put the ansible.cfg file alongside Jenkinsfile in the deploy directory. This way, anyone can easily identify that everything in there relates to deployment.
+
+We need to set the credentials for ansible to be able to work with jenkins smoothly. To do this we go to manage credentials under manage jenkins.
+![Alt text](Images_P14/set-up-ansible-credentials.png)
+![Alt text](Images_P14/addsshprivatekey.png)
+
+STEP 30: Using the Pipeline Syntax tool in Ansible, generate the syntax to create environment variables to set.
+![Alt text](Images_P14/snippet-generator.png)
+![Alt text](Images_P14/generate-pipeline-script.png)
+![Alt text](Images_P14/pipeline-script.png)
+
+step 31:
+Then in the inventory/dev file, we update the IP address for our database and nginx.
+![Alt text](Images_P14/update-dev-inventory-file-with-ip-address.png)
+
+step 32:
+We set up roles for the database and nginx. The database roles will create a database - tooling and a database user - webaccess. We will go ahead and edit the _defaults/main.yml file in the mysql role.
+![Alt text](Images_P14/set-up-roles-for-dbmysql.png)
+
+step 33: set up playbook/site.yml
+![Alt text](Images_P14/playbook-setup.png)
+
+step 34: We push to github and then click on "scan repository now" the ansible-config-mgt on the jenikins UI. The ansible-config_mgt repository is scanned for any branch that has a Jenkinsfile and then builds.
+![Alt text](Images_P14/Ansible-build-success1.png)
+
+step 35: PARAMETERIZING 'Jenkinsfile' FOR ANSIBLE DEPLOYMENT
+
+To deploy to other environments, we will need to use parameters.
+
+Update Jenkinsfile to introduce parameterization. Below is just one parameter. It has a default value in case if no value is specified at execution. It also has a description so that everyone is aware of its purpose.
+
+
+In the Ansible execution section, remove the hardcoded inventory/dev and replace with '${inventory}'
+
