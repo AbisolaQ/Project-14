@@ -31,7 +31,7 @@ pipeline {
 
       steps {
         sh 'echo /var/lib/jenkins/workspace/Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
-        sh 'sed -i "3 a roles_path=/var/lib/jenkins/workspace/main/roles" /var/lib/jenkins/workspace/Project-14_main/ansible-config-mgt/deploy/ansible.cfg'
+        sh 'sed -i "3 a roles_path=/var/lib/jenkins/workspace/main/roles" /var/lib/jenkins/workspace/4_feature_jenkinspipeline-stages/ansible-config-mgt/deploy/ansible.cfg'
       }
     }
 
